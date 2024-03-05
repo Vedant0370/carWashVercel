@@ -165,12 +165,30 @@ export default function Sidebar() {
                   </ul>
                 </li>
 
-                <li>
-                  <Link to={"/pushnotification"} onClick={closeSidebar}>Push Notification</Link>
+                <li className="active">
+                  <a
+                    href="#addoffers"
+                    data-toggle="collapse"
+                    aria-expanded="false"
+                    className="dropdown-toggle"
+                  >
+                    Add Offers
+                  </a>
+                  <ul
+                    className="collapse list-unstyled"
+                    id="addoffers"
+                  >
+                    <li>
+                      <Link to={"/addoffers"} onClick={closeSidebar}>Add Offers</Link>
+                    </li>
+                    <li>
+                      <Link to={"/viewoffers"} onClick={closeSidebar}>View Offers</Link>
+                    </li>
+                  </ul>
+
                 </li>
-                <li>
-                  <Link to={"/updatebookingstatus"} onClick={closeSidebar}>Update Booking Status</Link>
-                </li>
+
+              
 
                 <li className="active">
                   <a
@@ -212,6 +230,9 @@ export default function Sidebar() {
                   </ul>
                 </li>
 
+
+                
+
                 <li className="active">
                   <a
                     href="#viewavailablestocks"
@@ -237,6 +258,13 @@ export default function Sidebar() {
                   <Link to={"/availabledate"} onClick={closeSidebar}>Available date</Link>
                 </li>
 
+                <li>
+                  <Link to={"/pushnotification"} onClick={closeSidebar}>Push Notification</Link>
+                </li>
+                <li>
+                  <Link to={"/updatebookingstatus"} onClick={closeSidebar}>Update Booking Status</Link>
+                </li>
+
                 
                 <li className="active">
                   <a
@@ -260,10 +288,45 @@ export default function Sidebar() {
                   </ul>
                 </li>
 
-                <li>
+
+
+
+                <li className="active">
+                  <a
+                    href="#master"
+                    data-toggle="collapse"
+                    aria-expanded="false"
+                    className="dropdown-toggle"
+                  >
+                    Master
+                  </a>
+                  <ul
+                    className="collapse list-unstyled"
+                    id="master"
+                  >
+                    <li>
+                    <Link to={"/master"} onClick={closeSidebar}>Create Master</Link>
+                    </li>
+                    <li>
+                    <Link to={"/updatemaster"} onClick={closeSidebar}>Update Master</Link>
+                    </li>
+                  </ul>
+                </li>
+
+
+
+
+
+                {/* <li>
                       <Link to={"/master"} onClick={closeSidebar}>Master</Link>
                     </li>
 
+                    <li>
+                      <Link to={"/updatemaster"} onClick={closeSidebar}>Update Master</Link>
+                    </li> */}
+
+
+                
                 <li>
                 <Link className="logout bg-danger" onClick={handleLogout}>
                   Logout
